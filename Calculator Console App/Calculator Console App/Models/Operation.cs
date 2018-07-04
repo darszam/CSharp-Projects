@@ -17,11 +17,39 @@ namespace Calculator_Console_App.Models
         private int value = 0;
         private double dvalue =0.0;
 
+        public bool IfDouble { get => ifDouble; set => ifDouble = value; }
+        public bool IfInt { get => ifInt; set => ifInt = value; }
+        public int FirstValue { get => firstValue; set => firstValue = value; }
+        public double DfirstValue { get => dfirstValue; set => dfirstValue = value; }
+        public int SecondValue { get => secondValue; set => secondValue = value; }
+        public double DsecondValue { get => dsecondValue; set => dsecondValue = value; }
+        public int Value { get => this.value; }
+        public double Dvalue { get => dvalue; }
+
+
+        public Operation(string answer)
+        {
+            switch (answer)
+            {
+                case "integers":
+                    ifDouble = false;
+                    ifInt = true;
+                    break;
+                case "doubles":
+                    ifDouble = true;
+                    ifInt = false;
+                    break;
+                default:
+                    ifInt = true;
+                    ifDouble = false;
+                    break;
+
+            }
+        }
         public Operation()
         {
-            ifDouble = false;
-            ifInt = true;
-
+                    ifDouble = false;
+                    ifInt = true;
         }
         public static int Add(int x, int y) => x + y;
         public static int Sub(int x, int y) => x - y;
@@ -50,6 +78,30 @@ namespace Calculator_Console_App.Models
         public void Sub(double x)
         {
             dvalue -= x;
+        }
+        public void Mul(int x)
+        {
+            value *= x;
+        }
+        public void Mul(double x)
+        {
+            dvalue *= x;
+        }
+        public void Div(int x)
+        {
+            value /= x;
+        }
+        public void Div(double x)
+        {
+            dvalue /= x;
+        }
+        public void Mod(int x)
+        {
+            value %= x;
+        }
+        public void Mod(double x)
+        {
+            dvalue %= x;
         }
     }
 }
