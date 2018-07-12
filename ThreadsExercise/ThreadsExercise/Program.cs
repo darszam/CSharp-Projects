@@ -17,7 +17,22 @@ namespace ThreadsExercise
             {
                 Console.Write(0);
             }
-            */Console.ReadLine();
+            */
+            //Sleep example
+            int num = 1;
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(num);
+
+                // Pause for 1 second
+                Thread.Sleep(1000);
+
+                num++;
+            }
+
+            Console.WriteLine("Thread Ends");
+
+            Console.ReadLine();
         }
         static void Print1()
         {
