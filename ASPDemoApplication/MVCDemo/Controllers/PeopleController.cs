@@ -12,6 +12,8 @@ namespace MVCDemo.Controllers
         // GET: People
         public ActionResult Index()
         {
+            PersonModel p = new PersonModel();
+            int i = 5 / p.Age;
             return View();
         }
 
