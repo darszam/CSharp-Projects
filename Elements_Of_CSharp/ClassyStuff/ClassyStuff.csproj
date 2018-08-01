@@ -43,8 +43,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractEmployee.cs" />
+    <Compile Include="Company.cs" />
+    <Compile Include="Executive.cs" />
+    <Compile Include="HourlyEmployee.cs" />
+    <Compile Include="IManagable.cs" />
+    <Compile Include="Manager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SalariedEmployee.cs" />
     <Compile Include="Sentence.cs" />
   </ItemGroup>
   <ItemGroup>

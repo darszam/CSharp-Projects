@@ -22,7 +22,7 @@ namespace ClassyStuff
              * create a Company class that allows you to manage the employees. 
              * You should be able to hire, fire and raise employees.
              */
-
+            Company corpo = new Company();
             Console.ReadKey();
         }
     }

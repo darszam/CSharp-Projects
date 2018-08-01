@@ -9,6 +9,8 @@ namespace ClassyStuff
     abstract class AbstractEmployee
     {
         private string name;
-
+        private int salary;
+        public virtual void GetJobName() { }
+        public virtual int GetSalary() { return salary; }
     }
 }
