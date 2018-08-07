@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using DemoCoreWebAppMVC.Models;
 
 namespace DemoCoreWebAppMVC
 {
@@ -22,6 +24,9 @@ namespace DemoCoreWebAppMVC
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            services.AddDbContext<MusicContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("MusicContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
