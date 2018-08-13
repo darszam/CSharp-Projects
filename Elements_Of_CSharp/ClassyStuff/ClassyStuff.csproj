@@ -45,6 +45,7 @@
     <Compile Include="AbstractEmployee.cs" />
     <Compile Include="Company.cs" />
     <Compile Include="Executive.cs" />
+    <Compile Include="Fizzbuzz.cs" />
     <Compile Include="HourlyEmployee.cs" />
     <Compile Include="IManagable.cs" />
     <Compile Include="Manager.cs" />
