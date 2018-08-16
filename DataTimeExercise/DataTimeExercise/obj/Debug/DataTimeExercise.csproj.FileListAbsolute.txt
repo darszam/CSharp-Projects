@@ -1,7 +1,0 @@
-D:\Gity\CSharpTutorial\DataTimeExercise\DataTimeExercise\bin\Debug\DataTimeExercise.exe.config
-D:\Gity\CSharpTutorial\DataTimeExercise\DataTimeExercise\bin\Debug\DataTimeExercise.exe
-D:\Gity\CSharpTutorial\DataTimeExercise\DataTimeExercise\bin\Debug\DataTimeExercise.pdb
-D:\Gity\CSharpTutorial\DataTimeExercise\DataTimeExercise\obj\Debug\DataTimeExercise.csprojResolveAssemblyReference.cache
-D:\Gity\CSharpTutorial\DataTimeExercise\DataTimeExercise\obj\Debug\DataTimeExercise.csproj.CoreCompileInputs.cache
-D:\Gity\CSharpTutorial\DataTimeExercise\DataTimeExercise\obj\Debug\DataTimeExercise.exe
-D:\Gity\CSharpTutorial\DataTimeExercise\DataTimeExercise\obj\Debug\DataTimeExercise.pdb
