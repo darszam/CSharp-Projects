@@ -19,8 +19,13 @@ namespace DemoCoreWebAppMVC.Controllers
         }
 
         // GET: Musics
-        public async Task<IActionResult> Index(string searchString)
+        public async Task<IActionResult> Index(string musicGenre, string searchString)
         {
+            //LINQ
+            IQueryable<string> genreQuery = from m in _context.Music
+                                            orderby m.Genre
+                                            select m.Genre;
+
             var musics = from m in _context.Music
                          select m;
 
@@ -28,7 +33,15 @@ namespace DemoCoreWebAppMVC.Controllers
             {
                 musics = musics.Where(s => s.Title.Contains(searchString));
             }
-            return View(await musics.ToListAsync());
+            if (!String.IsNullOrEmpty(musicGenre))
+            {
+                musics = musics.Where(x => x.Genre == musicGenre);
+            }
+            var musicGenreVM = new MusicGenreViewModel();
+            musicGenreVM.genres = new SelectList(await genreQuery.Distinct().ToListAsync());
+            musicGenreVM.musics = await musics.ToListAsync();
+
+            return View(musicGenreVM);
         }
 
         // GET: Musics/Details/5

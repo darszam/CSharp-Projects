@@ -1,5 +1,4 @@
-﻿@model IEnumerable<DemoCoreWebAppMVC.Models.Music>
-
+﻿@model DemoCoreWebAppMVC.Models.MusicGenreViewModel
 @{
     ViewData["Title"] = "Index";
 }
@@ -11,6 +10,10 @@
 </p>
 <form asp-controller="Musics" asp-action="Index">
     <p>
+        <select asp-for="MusicGenre" asp-items="Model.genres">
+            <option value="">All</option>
+        </select>
+
         Title: <input type="text" name="SearchString">
         <input type="submit" value="Filter" />
     </p>
@@ -18,42 +21,43 @@
 <table class="table">
     <thead>
         <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Title)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.ReleaseTime)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Genre)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Price)
-                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.musics[0].Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.musics[0].ReleaseTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.musics[0].Genre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.musics[0].Price)
+            </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ReleaseTime)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Genre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.musics)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReleaseTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Genre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
