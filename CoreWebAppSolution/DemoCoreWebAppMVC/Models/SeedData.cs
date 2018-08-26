@@ -26,7 +26,8 @@ namespace DemoCoreWebAppMVC.Models
                          Title = "Fine Again",
                          ReleaseTime = DateTime.Parse("1989-1-11"),
                          Genre = "Rock",
-                         Price = 7.99M
+                         Price = 7.99M,
+                         Rating = "5"
                      },
 
                      new Music
@@ -34,7 +35,8 @@ namespace DemoCoreWebAppMVC.Models
                          Title = "Will Power",
                          ReleaseTime = DateTime.Parse("1984-3-13"),
                          Genre = "Rock",
-                         Price = 8.99M
+                         Price = 8.99M,
+                         Rating = "6"
                      },
 
                      new Music
@@ -42,7 +44,8 @@ namespace DemoCoreWebAppMVC.Models
                          Title = "Iridium",
                          ReleaseTime = DateTime.Parse("1986-2-23"),
                          Genre = "Rock",
-                         Price = 9.99M
+                         Price = 9.99M,
+                         Rating = "10"
                      },
 
                    new Music
@@ -50,7 +53,8 @@ namespace DemoCoreWebAppMVC.Models
                        Title = "Paper Moon",
                        ReleaseTime = DateTime.Parse("1959-4-15"),
                        Genre = "Rock",
-                       Price = 3.99M
+                       Price = 3.99M,
+                       Rating = "12"
                    }
                 );
                 context.SaveChanges();

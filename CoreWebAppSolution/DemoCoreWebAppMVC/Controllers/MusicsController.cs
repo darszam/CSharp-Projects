@@ -73,7 +73,7 @@ namespace DemoCoreWebAppMVC.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Title,ReleaseTime,Genre,Price")] Music music)
+        public async Task<IActionResult> Create([Bind("ID,Title,ReleaseTime,Genre,Price,Rating")] Music music)
         {
             if (ModelState.IsValid)
             {
@@ -105,7 +105,7 @@ namespace DemoCoreWebAppMVC.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Title,ReleaseTime,Genre,Price")] Music music)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,Title,ReleaseTime,Genre,Price,Rating")] Music music)
         {
             if (id != music.ID)
             {
