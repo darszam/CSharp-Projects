@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using ClassyStuff.BasicCS;
 namespace ClassyStuff
 {
     class Program
@@ -22,8 +22,9 @@ namespace ClassyStuff
              * create a Company class that allows you to manage the employees. 
              * You should be able to hire, fire and raise employees.
              */
-            //Company corpo = new Company();
-            Fizzbuzz.DoIt();
+            //Company corpo = new Company(); 
+            //Fizzbuzz.DoIt();
+            Color.ConsoleOperationExamples();
             Console.ReadKey();
         }
     }

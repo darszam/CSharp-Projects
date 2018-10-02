@@ -42,17 +42,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractEmployee.cs" />
-    <Compile Include="Company.cs" />
-    <Compile Include="Executive.cs" />
-    <Compile Include="Fizzbuzz.cs" />
-    <Compile Include="HourlyEmployee.cs" />
-    <Compile Include="IManagable.cs" />
-    <Compile Include="Manager.cs" />
+    <Compile Include="BasicCS\Color.cs" />
+    <Compile Include="HierarchyCompany\AbstractEmployee.cs" />
+    <Compile Include="HierarchyCompany\Company.cs" />
+    <Compile Include="HierarchyCompany\Executive.cs" />
+    <Compile Include="OneLiners\Fizzbuzz.cs" />
+    <Compile Include="HierarchyCompany\HourlyEmployee.cs" />
+    <Compile Include="HierarchyCompany\IManagable.cs" />
+    <Compile Include="HierarchyCompany\Manager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SalariedEmployee.cs" />
-    <Compile Include="Sentence.cs" />
+    <Compile Include="HierarchyCompany\SalariedEmployee.cs" />
+    <Compile Include="OneLiners\Sentence.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
